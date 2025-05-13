@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Form</title>
+</head>
+<body> 
+    <h1>Wedding Form</h1>
+
+    <form action="" method="post">
+        <fieldset>
+            <legend>Basic Information</legend>
+
+            <label for="firstname">First Name:</label>
+            <input type="text" name="firstname" id="firstname" required><br>
+
+            <label for="lastname">Last Name:</label>
+            <input type="text" name="lastname" id="lastname" required><br>
+
+            <p>Select your Gender:</p>
+            <input id="female" type="radio" name="gender" value="female">
+            <label for="female">Female</label>
+            <input id="male" type="radio" name="gender" value="male" checked>
+            <label for="male">Male</label><br>
+
+            <p>Enter your age:</p>
+            <input type="text" name="age"><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" name="dob" id="dob"><br>
+
+            <p>Enter your Biography:</p>
+            <textarea name="biography" rows="5" cols="50"></textarea><br>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Additional Information</legend>
+
+        <p>What qualities do you look for in a life partner? (Select all that apply)</p>
+<input type="checkbox" name="partner_traits[]" value="Kind" checked> Kind
+<input type="checkbox" name="partner_traits[]" value="Educated"> Educated
+<input type="checkbox" name="partner_traits[]" value="Religious"> Religious
+<input type="checkbox" name="partner_traits[]" value="Financially Stable"> Financially Stable
+<input type="checkbox" name="partner_traits[]" value="Family-Oriented"> Family-Oriented
+
+
+            <p>Which partner do you prefer:</p>
+            <select name="preference">
+                <option value="single">Single</option>
+                <option value="divorced">Divorced</option>
+                <option value="widowed">Widowed</option>
+            </select><br>
+
+<p>Which wedding services do you need:</p>
+<select name="wedding_services[]" size="4" multiple>
+    <option value="venue" selected>Venue Booking</option>
+    <option value="catering">Catering</option>
+    <option value="photography" selected>Photography</option>
+    <option value="decorations">Decorations</option>
+</select><br>
+
+
+<p>Partner's age preference:</p>
+<input type="range" name="partner_age" min="18" max="70" value="30" oninput="ageOutput.value = this.value">
+<output name="ageOutput" for="partner_age">30</output> years<br>
+
+
+            <p>Upload Your Picture:</p>
+            <input type="file" name="Userpic"><br>
+        </fieldset>
+
+        <br>
+
+        <fieldset> 
+            <legend>Contact Details</legend>
+
+            <label for="email">Email:</label><br>
+            <input type="email" name="email" id="email"><br>
+
+            <label for="mobile">Mobile:</label><br>
+            <input type="text" name="mobile" id="mobile"><br>
+
+            <label for="telephone">Telephone:</label><br>
+            <input type="text" name="telephone" id="telephone"><br>
+
+            <label for="profile">Facebook/Instagram Profile Link:</label><br>
+            <input type="url" name="profile" id="profile"><br>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Queries</legend>
+            <p>Ask about your queries:</p>
+            <input type="search" name="search" placeholder="Enter Query">
+            <input type="submit" value="Search">
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Form Filling Method</legend>
+            <p>Here's a tutorial video to fill a form:</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/taFQQFZsDRU?si=2giF0WAh14bq47zB"
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </fieldset>
+
+        <br>
+
+        <input type="submit" value="Submit All">
+    </form>
+</body>
+</html>
